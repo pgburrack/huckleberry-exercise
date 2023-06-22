@@ -1,5 +1,12 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
   font-family: 'Lato', sans-serif;
 }
 
@@ -10,3 +17,106 @@ body {
 }
 
 /* Add styles here! */
+:root {
+  --gap-1: 8px;
+  --gap-2: calc(var(--gap-1) * 2);
+  --gap-3: calc(var(--gap-1) * 3);
+  --gap-4: calc(var(--gap-1) * 4);
+  --gap-6: calc(var(--gap-1) * 6);
+  --gap-8: calc(var(--gap-1) * 8);
+  --gap-9: calc(var(--gap-1) * 9);
+  --gap-12: calc(var(--gap-1) * 12);
+  --gap-16: calc(var(--gap-1) * 16);
+
+
+  --font-size-1: 1rem; /* 16px */
+  --font-size-2: 1.25rem; /* 20px */
+  --font-size-3: 1.5rem; /* 24px */
+  --font-size-4: 2rem; /* 32px */
+
+  /* Primary (green): */
+  --color-primary: hsl(160deg, 100%, 30%);
+
+  /* Secondary (gold): */
+  --color-secondary-lighter: hsl(45deg, 100%, 50%);
+  --color-secondary-darker: hsl(45deg, 100%, 40%);
+
+  /* Grays */
+  --color-black: hsl(0deg, 0%, 0%);
+  --color-very-dark: hsl(0deg, 0%, 10%);
+  --color-dark: hsl(0deg, 0%, 30%);
+  --color-medium: hsl(0deg, 0%, 40%);
+  --color-light: hsl(0deg, 0%, 60%);
+  --color-white: hsl(0deg, 0%, 100%);
+}
+
+header {
+  padding-top: var(--gap-6);
+}
+
+main {
+  background-color: var(--color-medium);
+  border-top: var(--gap-1)  solid var(--color-light);
+  padding-block: var(--gap-9);
+}
+
+strong {
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--color-black);
+  font-size: var(--font-size-2);
+  line-height: 1.5;
+  margin-block: var(--gap-2);
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.intro-chunk {
+  padding-inline: var(--gap-3);
+  width: fit-content;
+  margin-block: var(--gap-6);
+}
+
+.intro-chunk p {
+  max-width: 415px;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding-block: var(--gap-1);
+  padding-inline: var(--gap-3);
+  border-bottom: var(--gap-1) solid var(--color-light);
+}
+
+.card p {
+  font-weight: 500;
+}
+
+.title {
+  color: var(--color-black);
+  font-size: var(--font-size-4);
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: var(--gap-6);
+}
+
+.indented-heading {
+  color: var(--color-black);
+  font-size: var(--font-size-3);
+  font-weight: 800;
+  line-height: 1.2;
+
+  background-color: var(--color-secondary-lighter);
+
+  width: fit-content;
+  padding: var(--gap-2) var(--gap-4);
+
+  border-bottom: var(--gap-1) solid var(--color-secondary-darker);
+
+  margin-left: calc(var(--gap-4) * -1);
+}
